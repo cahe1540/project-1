@@ -1,0 +1,57 @@
+Expense Reimursement system:
+-Employees create reimbursement requests
+-Managers can see the requests and approve, deny, or leave a message.
+
+-Employee can login to see own reimbursements, past and pending
+-Employee can submit a reimbursement with amount and a reason
+	- bonus file upload
+- Manager can view all reimbursements past and pending
+- Manager can approve or deny reimbursement
+- Manger can view statistics page
+
+Front End requirements:
+1) Login page 
+2) Employee Dashboard Page
+	-show reimbursements
+	-create reimbursements
+		-amount, reason, ?file upload?
+
+3) Manager Dashboard Page
+	- view reimbursements page
+		- reimbursements show data and manager can approve deny
+	- statistics page
+
+
+BackEnd Endpoints:
+1) GET /users/login?user_name=USERNAME&password=PASSWORD  login for both managers and employees
+	-data sent in query params
+2) GET employees/<employee_id>/reimbursements get all r. by employee id
+	- no data sent
+3) POST /reimbursements/employees/<employee_id> employee post reimbursement
+	- data sent in json
+4) GET /reimbursements MANAGER ONLY gets all reimbursement
+	- no data
+5) GET /reimbursements/analytics MANAGER ONLY gets all r. stats  
+	- get all reimbursements
+6) PATCH /managers/<manager_id>/reimbursements/<reimbursement_id> manager rejects/accepts r and/or leaves note
+	- data sent in json
+
+Database: 
+users(user_id, first_name, last_name, username, image, password, role)
+reimbursements(r_id, date, amount, reason, file, status, user_id) 
+1 -> 1 relationship with users
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

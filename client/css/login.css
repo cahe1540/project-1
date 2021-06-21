@@ -1,0 +1,49 @@
+:root{
+    --color-1: rgb(147, 182, 196);
+}
+
+*{
+    box-sizing: border-box;
+	margin:0;
+	padding:0;
+}
+
+/*globals*/
+.bg-color1{
+    background:#326f81;
+}
+
+.no-border{
+    border: none;
+}
+
+.hidden{
+    display:none;
+}
+
+body{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/*Image section of login*/
+.image-section{
+    height: 100vh;
+    background: url("../img/login-bg.jpg");
+    opacity: 90%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*login section*/
+.login-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    position: relative;
+    width: 80%;
+}
